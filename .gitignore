@@ -1,0 +1,48 @@
+# ============================
+# Terraform local data
+# ============================
+.terraform/
+terraform.tfstate
+terraform.tfstate.*
+crash.log
+.terraform.lock.hcl
+
+# Backup & override files
+*.backup
+override.tf
+override.tf.json
+
+# ============================
+# Sensitive data
+# ============================
+*.tfvars
+*.tfvars.json
+*.pem
+*.key
+*.crt
+*.csr
+id_rsa
+id_rsa.pub
+
+# ============================
+# Ansible files (Fase 2)
+# ============================
+inventory.ini
+*.vault
+*.retry
+*.log
+
+# ============================
+# IDE / OS
+# ============================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ============================
+# Python / Virtualenv (si usas Ansible en venv)
+# ============================
+venv/
+.env/
+__pycache__/

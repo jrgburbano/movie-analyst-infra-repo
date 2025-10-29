@@ -20,3 +20,9 @@ module "route_tables" {
   private_subnet_id = module.subnets.private_subnet_id
   project           = "movie-analyst"
 }
+
+module "igw" {
+  source  = "./modules/igw"
+  vpc_id  = module.vpc.vpc_id
+  project = "movie-analyst"
+}

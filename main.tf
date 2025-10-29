@@ -12,3 +12,11 @@ module "subnets" {
   az           = var.az
   project      = "movie-analyst"
 }
+
+module "route_tables" {
+  source            = "./modules/route_tables"
+  vpc_id            = module.vpc.vpc_id
+  public_subnet_id  = module.subnets.public_subnet_id
+  private_subnet_id = module.subnets.private_subnet_id
+  project           = "movie-analyst"
+}

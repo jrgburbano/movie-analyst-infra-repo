@@ -18,6 +18,7 @@ module "route_tables" {
   vpc_id            = module.vpc.vpc_id
   public_subnet_id  = module.subnets.public_subnet_id
   private_subnet_id = module.subnets.private_subnet_id
+  igw_id            = module.igw.igw_id
   project           = "movie-analyst"
 }
 

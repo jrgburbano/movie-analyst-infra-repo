@@ -17,3 +17,8 @@ variable "project" {
   description = "Project name for tagging"
   type        = string
 }
+
+variable "igw_id" {
+  description = "ID of the Internet Gateway for public route"
+  type        = string
+}

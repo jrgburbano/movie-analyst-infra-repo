@@ -27,3 +27,10 @@ module "igw" {
   vpc_id  = module.vpc.vpc_id
   project = "movie-analyst"
 }
+
+module "security_groups" {
+  source            = "./modules/security_groups"
+  vpc_id            = module.vpc.vpc_id
+  project           = "movie-analyst"
+  allowed_ssh_cidr  = "152.201.119.52/32" # ← Replace with local public IP
+}
